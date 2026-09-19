@@ -1,0 +1,12 @@
+{
+  "name": "student-privacy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "node tests/engine.test.mjs && node tests/runtime.test.mjs && node tests/school-record.test.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
