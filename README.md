@@ -20,7 +20,7 @@ PDF export uses MuPDF redaction, pixel removal and non-incremental full save wit
 
 ## Limitations
 
-Recognition requires human review. Handwriting, uncommon names, unusual school/address formats, outlined text, low-quality scans and small faces may be missed. Small embedded images are conservative photo candidates and may include diagrams; users can deselect them. Detection of students combined in a single file is not automatic splitting. One student per input file, up to 50 MiB per file, 350 MiB combined, 400 pages per document. Student IDs contain 3–12 digits. Colliding ZIP filenames are rejected.
+Recognition requires human review. Handwriting, uncommon names, unusual school/address formats, outlined text, low-quality scans and small faces may be missed. Small embedded images are conservative photo candidates and may include diagrams; users can deselect them. Detection of students combined in a single file is not automatic splitting. One student per input file, up to 50 MiB per file, 350 MiB combined, 600 pages per document. Student IDs contain 3–12 digits. Colliding ZIP filenames are rejected.
 
 HWP/HWPX/DOCX must first be exported to PDF. Faces are detected, never identified. Tesseract is used for image location detection only, not PDF reconstruction.
 
