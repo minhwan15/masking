@@ -7,7 +7,7 @@ async function handle({data:{id,action,args}}){
   const {openPDF,extractPage,renderPage,imagePDF,redactPDF}=await engineReady;
   if(action==='load'){
    const doc=args.image?imagePDF(new Uint8Array(args.bytes)):openPDF(new Uint8Array(args.bytes));
-   if(doc.countPages()>400){doc.destroy();throw Error('한 파일은 400페이지까지 지원합니다. 학생별로 나누어 불러오세요.')}
+   if(doc.countPages()>600){doc.destroy();throw Error('한 파일은 600페이지까지 지원합니다. 학생별로 나누어 불러오세요.')}
    docs.set(args.key,doc);const pages=[];
    for(let i=0;i<doc.countPages();i++){pages.push(extractPage(doc,i));self.postMessage({id,progress:Math.round(100*(i+1)/doc.countPages()),message:`문서 읽는 중 · ${i+1}/${doc.countPages()}쪽`})}
    result={pages};
